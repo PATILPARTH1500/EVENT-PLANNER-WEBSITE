@@ -328,14 +328,14 @@ body {
 .logo .art {
   color: rgb(241, 187, 219);
   display: inline; /* Ensures the span stays in line with the rest */
-  font-size:60px;
+  font-size:40px;
   text-shadow: 4px 4px 4px #000000;
 }
 
 .logo .home{
   color:var(--green-blue-crayola);
   display:inline;
-  font-size:60px;
+  font-size:40px;
   text-shadow: 4px 4px 4px #000000;
 }
 
@@ -412,7 +412,7 @@ body {
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--black_60);
+  background-color: white;
   z-index: 2;
   visibility: hidden;
   opacity: 0;
@@ -1018,6 +1018,7 @@ body {
     align-items: center;
     gap: 20px;
     text-align: right;
+    right:10px;
     line-height: 1.2;
     margin-inline-start: auto;
   }
@@ -1318,7 +1319,7 @@ body {
    * HEADER
    */
 
-  .header .contact-number { --fs-6: 3rem; }
+  .header .contact-number { --fs-6: 2rem; }
 
 
 
