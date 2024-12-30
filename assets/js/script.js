@@ -21,8 +21,6 @@ for (let i = 0; i < navLinks.length; i++) {
   });
 }
 
-
-
 // header
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
@@ -37,7 +35,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const imageSlider = document.getElementById('imageSlider');
   const slides = document.querySelectorAll('.slide');
@@ -49,23 +46,21 @@ document.addEventListener('DOMContentLoaded', function () {
   imageSlider.classList.remove('hidden'); // Remove hidden class to show slider
   imageSlider.classList.add('show'); // Add show class for fade-in effect
 
+  // Show the first slide initially
+  slides[currentSlide].classList.add('active'); // Show the first slide
+
   // Function to start the image slider
   function startImageSlider() {
-    slides[currentSlide].classList.add('active'); // Show the first slide
-
-    // Start the slider interval
     sliderInterval = setInterval(() => {
       slides[currentSlide].classList.remove('active'); // Hide current slide
       currentSlide = (currentSlide + 1) % slides.length; // Move to the next slide
       slides[currentSlide].classList.add('active'); // Show next slide
-    }, 7000); // Change slide every 7 seconds
+    }, 10000); // Change slide every 10 seconds
   }
 
-  // Start the image slider
-  startImageSlider();
-
-  // Function to show hero content after the first slide
+  // Start the image slider after 15 seconds
   setTimeout(() => {
+    startImageSlider();
     heroContent.classList.add('show'); // Show hero content after the first slide
-  }, 7000); // Adjust timing based on your slider interval
+  }, 15000); // Adjust timing based on your slider interval
 });
